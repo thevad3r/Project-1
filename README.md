@@ -4,4 +4,4 @@
 Этот репозиторий является каркасом для будущего веб-приложения.
 
 ## Ссылки
-- [Публичная страница на GitHub Pages](https://thevad3r.github.io/project/)
+- [Публичная страница на GitHub Pages](https://thevad3r.github.io/Project-1/)
