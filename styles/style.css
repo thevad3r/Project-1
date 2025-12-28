@@ -149,6 +149,7 @@ html {
 
 .link:hover,
 .link:focus-visible {
+    outline: none;
     opacity: 1;
 }
 
@@ -323,7 +324,7 @@ body {
 }
 
 .header__nav {
-    padding: var(--spacing-5);
+    padding: var(--spacing-5) 0;
 
     display: flex;
     justify-content: center;
@@ -360,6 +361,7 @@ main > section {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: var(--spacing-3);
 }
 
 .hero-block__header-container {
@@ -394,11 +396,9 @@ main > section {
     grid-template-columns: subgrid;
 }
 
-.advantages-block__cards-container > .advantage-card {
-    grid-column: span 3;
-}
-
 .advantage-card {
+    grid-column: span 3;
+
     display: flex;
     flex-direction: column;
     gap: var(--spacing-6);
@@ -421,6 +421,7 @@ main > section {
 
 .product-card {
     grid-column: span 3;
+    
     display: flex;
     flex-direction: column;
     gap: var(--spacing-6);
@@ -455,6 +456,7 @@ main > section {
 
     grid-column: span 3;
     grid-template-columns: subgrid;
+    column-gap: 0;
     
     background-color: var(--black-2);
 }
@@ -503,6 +505,7 @@ main > section {
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
+    gap: var(--spacing-2);
 }
 
 .story-block__text-container {
@@ -518,8 +521,12 @@ main > section {
 }
 
 .story-block__img {
+    width: 100%;
+    height: 100%;
+
     grid-column: span 7;
-    height: 600px;
+
+    object-fit: cover;
 }
 
 .footer {
@@ -581,4 +588,139 @@ main > section {
 .footer__social-media {
     display: flex;
     gap: var(--spacing-6);
+}
+
+@media (max-width: 1300px) {
+    .footer__footer-menu {
+        row-gap: var(--spacing-3);
+    }
+
+    .footer__footer-menu > * {
+        grid-column: span 12;
+    }
+}
+
+@media (max-width: 1200px) {
+    .advantages-block__cards-container {
+        row-gap: var(--spacing-5);
+    }
+
+    .advantage-card {
+        grid-column: span 6;
+    }
+
+    .products-block__products-container {
+        row-gap: var(--spacing-5);
+    }
+
+    .product-card {
+        grid-column: span 6;
+    }
+
+    .product-card--big {
+        grid-column: span 12;
+    }
+
+    .story-block__text {
+        padding: var(--spacing-1) 0;
+
+        grid-column: 2 / 14;
+    }
+
+    .story-block__img {
+        height: 50vh;
+
+        grid-column: span 14;
+    }
+}
+
+@media (max-width: 950px) {
+    .hero-block__text {
+        grid-column: span 12;
+    }
+    
+    .hero-block__img {
+        height: 50vh;
+        
+        grid-column: span 12;
+
+        object-position: bottom;
+    }
+}
+
+@media (max-width: 700px) {
+    body {
+        grid-template-columns: var(--spacing-5) 1fr var(--spacing-5);
+    }
+
+    .story-block {
+        grid-template-columns: var(--spacing-5) repeat(12, minmax(0, 1fr)) var(--spacing-5);
+    }
+
+    .hero-block__text, .sign-up-block__form-container {
+        padding: var(--spacing-3);
+    }
+
+    .story-block__text {
+        padding: var(--spacing-3) 0;
+    }
+}
+
+@media (max-width: 550px) {
+    .header__nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .advantages-block__header {
+        text-align: left;
+    }
+
+    .advantage-card {
+        grid-column: span 12;
+    }
+
+    .product-card {
+        grid-column: span 12;
+    }
+
+    .input-with-button {
+        flex-direction: column;
+    }
+
+    .footer-menu__nav {
+        row-gap: var(--spacing-3);
+    }
+
+    .footer-menu__nav > * {
+        grid-column: span 3;
+    }
+
+    .footer__footer-bottom {
+        flex-direction: column;
+        gap: var(--spacing-4);
+    }
+}
+
+@media (max-width: 450px) {
+    h1 {
+        font-size: 1.25rem;
+        line-height: 2rem;
+    }
+
+    body {
+        grid-template-columns: var(--spacing-6) 1fr var(--spacing-6);
+    }
+
+    .story-block {
+        grid-template-columns: var(--spacing-6) repeat(12, minmax(0, 1fr)) var(--spacing-6);
+    }
+
+    .hero-block__text, .sign-up-block__form-container {
+        padding: var(--spacing-4);
+    }
+
+    .story-block__text {
+        padding: var(--spacing-4) 0;
+    }
 }
