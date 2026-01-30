@@ -20,13 +20,18 @@
                 <button class="icon-button">
                     <img class="icon--small" src="./assets/icons/User-avatar.png" alt="">
                 </button>
+                <button class="icon-button menu-toggle" id="menuToggle" aria-label="Открыть меню" aria-expanded="false">
+                    <span class="menu-toggle__line"></span>
+                    <span class="menu-toggle__line"></span>
+                    <span class="menu-toggle__line"></span>
+                </button>
             </div>
         </div>
-        <nav class="header__nav">
-            <a class="link link--light" href="#new-products">Новые товары</a>
-            <a class="link link--light" href="#popular-products">Популярные товары</a>
-            <a class="link link--light" href="#our-story">Наша история</a>
-            <a class="link link--light" href="">Каталог</a>
+        <nav class="header__nav" id="headerNav">
+            <a class="link nav__link link--light" href="#new-products">Новые товары</a>
+            <a class="link nav__link link--light" href="#popular-products">Популярные товары</a>
+            <a class="link nav__link link--light" href="#our-story">Наша история</a>
+            <a class="link nav__link link--light" href="">Каталог</a>
         </nav>
     </header>
     <main>
@@ -213,5 +218,8 @@
             </div>
         </div>
     </footer>
+    <button class="button button--light-secondary scroll-top" id="scrollTop" aria-label="Наверх">↑</button>
+
+    <script src="scripts/menu.js"></script>
 </body>
 </html>
